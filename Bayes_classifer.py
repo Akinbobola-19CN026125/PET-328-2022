@@ -21,7 +21,6 @@ p_D_gamma_60 = (p_D* p_gamma_D) / (p_D* p_gamma_D + p_S * p_gamma_S)
 
 if p_D_gamma_60 >= 0.5:
     print('The formation interval is Dolomite, a pay lithology')
-
 else:
     print('The formation interval is shale, a non pay lithology')
 print('Therefore, the reservoir formation interval has been determined')
