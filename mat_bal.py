@@ -14,12 +14,12 @@ ce = float(input('What is the value of effective compressibility?'))
 total_np = 0
 # the 'for' loops
 for k in range(1,nz+1):
+    boi = float(input('What is the value of initial oil FVF for layer {0}?'.format(k)))
+    Pi = float(input('What is the value of initial reservoir pressure for layer{0}?'.format(k)))        
     for j in range(1,ny+1):
         for i in range(1,nx+1):
             block_n_order = ((k-1)*nx*ny)+(nx*(j-1))+i
             Pnow = float(input('What is the current value of pressure for Block {0}?'.format(block_n_order)))
-            boi = float(input('What is the value of initial oil FVF for Block {0}?'.format(block_n_order)))
-            Pi = float(input('What is the value of initial reservoir pressure for Block {0}?'.format(block_n_order)))
             bo = bob*(1 - (co*(Pnow - Pb)))
             block_np = (N*boi*ce*(Pi - Pnow))/bo
             total_np = total_np + block_np
